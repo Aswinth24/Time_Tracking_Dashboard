@@ -55,6 +55,7 @@ function creatingTabs(titleText, hoursText, previousText, index, text) {
   title.textContent = titleText;
   const img = document.createElement("img");
   img.setAttribute("src", "/assets/images/icon-ellipsis.svg");
+  img.setAttribute("alt", "images");
 
   title_cont.appendChild(title);
   title_cont.appendChild(img);
