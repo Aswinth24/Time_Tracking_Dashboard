@@ -1,0 +1,395 @@
+@import "./varaible";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+@function fontSize($keys) {
+  @return map-get($font-sizes, $keys);
+}
+@function rootWidth($keys) {
+  @return map-get($root-cont-width, $keys);
+}
+@function rootHeight($keys) {
+  @return map-get($root-cont-height, $keys);
+}
+@function profileWidth($keys) {
+  @return map-get($profile_width, $keys);
+}
+@mixin flexCenter($direction) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: $direction;
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+  color: white;
+  font-family: $font_family;
+  background-color: $Very_dark_blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.root-cont {
+  min-width: rootWidth("level_1");
+  height: rootHeight("level_1");
+
+  display: flex;
+  gap: 25px;
+}
+.profile {
+  width: profileWidth("level_1");
+  height: 100%;
+  border-radius: 15px;
+  transition: all 0.3s ease-in-out;
+}
+.daily_info {
+  width: calc(100% - profileWidth("level_1"));
+  padding: 5px 0 0 0;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, calc(770px / 3));
+  grid-template-rows: repeat(2, calc(70vh / 2));
+  gap: 28px;
+  transition: all 0.3s ease-in-out;
+}
+.cont {
+  position: relative;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 15px;
+  overflow: hidden;
+
+  .bg_cont {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: right 5% top 0%;
+  }
+  &:nth-child(1) {
+    background-color: $Light_red;
+  }
+  &:nth-child(2) {
+    background-color: $Soft_blue;
+  }
+  &:nth-child(3) {
+    background-color: $Light_red_study;
+  }
+  &:nth-child(4) {
+    background-color: $Lime_green_exercise;
+  }
+  &:nth-child(5) {
+    background-color: $Violet_social;
+  }
+  &:nth-child(6) {
+    background-color: $Soft_orange_self_care;
+  }
+  .cont-child {
+    background-color: $Dark_blue;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 82%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    &:hover {
+      background-color: $Desaturated_blue;
+    }
+    .title-cont {
+      width: 100%;
+      flex: 1;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      gap: 50px;
+    }
+    .hours-detials {
+      width: 100%;
+      flex: 2.5;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding-top: 5px;
+      flex-direction: column;
+      .hours {
+        font-size: 4.5rem;
+      }
+      .previous {
+        font-size: 18px;
+        color: $Pale_Blue;
+      }
+    }
+  }
+}
+
+.profile {
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: $Dark_blue;
+  .profile_cont {
+    background-color: $Blue;
+    border-radius: 20px;
+    height: 68%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 33px 0 0 25px;
+    gap: 0px;
+    .profile_pic {
+      flex: 1;
+      width: 100%;
+      img {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        border: 2px solid white;
+      }
+    }
+    .profile_name {
+      flex: 1.5;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      .report {
+        font-size: 1.1rem;
+      }
+      .name {
+        font-size: 2.5rem;
+      }
+    }
+  }
+  .nav_bar {
+    height: 32%;
+    color: $Pale_Blue;
+    ul {
+      height: 100%;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+
+      li {
+        cursor: pointer;
+        font-size: fontSize(normal);
+      }
+    }
+  }
+}
+.current {
+  color: rgb(254, 254, 254);
+}
+
+@media screen and (max-width: 1120px) {
+  .root-cont {
+    min-width: rootWidth(level_2);
+    max-height: rootHeight(level_2);
+
+    .profile {
+      min-width: profileWidth(level_2);
+      height: 100%;
+      .profile_cont {
+        .profile_name {
+          gap: 5px;
+          .report {
+            font-size: 0.9rem;
+          }
+          .name {
+            font-size: 1.9rem;
+            word-wrap: break-word;
+          }
+        }
+      }
+      .nav_bar {
+        ul {
+          padding: 20px 30px;
+          gap: 15px;
+          li {
+            font-size: fontSize(medium);
+          }
+        }
+      }
+    }
+    .daily_info {
+      width: calc(100% - profileWidth(level_2));
+
+      grid-template-columns: repeat(3, calc(60vw / 3));
+      grid-template-rows: repeat(2, calc(60vh / 2));
+
+      .cont {
+        .cont-child {
+          .title-cont {
+            font-size: 15px;
+          }
+          .hours-detials {
+            .hours {
+              font-size: 3.3rem;
+            }
+            .previous {
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 970px) {
+  .root-cont {
+    min-width: rootWidth(level_3);
+    height: rootHeight(level_3);
+    .profile {
+      max-width: profileWidth(level_3);
+      .profile_cont {
+        .profile_name {
+          padding-top: 10px;
+          gap: 5px;
+          .report {
+            font-size: 0.7rem;
+          }
+          .name {
+            font-size: 1.5rem;
+            padding-right: 2px;
+            word-wrap: break-word;
+          }
+        }
+      }
+      .nav_bar {
+        ul {
+          padding: 14px 15px;
+          gap: 10px;
+          li {
+            font-size: fontSize(medium);
+          }
+        }
+      }
+    }
+    .daily_info {
+      width: calc(100% - profileWidth(level_3));
+      grid-template-columns: repeat(3, calc(540px / 3));
+      grid-template-rows: repeat(2, calc(51vh / 2));
+      gap: 15px;
+      .cont {
+        .cont-child {
+          .title-cont {
+            font-size: 14px;
+          }
+          .hours-detials {
+            .hours {
+              font-size: 3rem;
+            }
+            .previous {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    align-items: unset;
+  }
+  .root-cont {
+    padding: 20px;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    .profile {
+      min-width: 250px;
+      min-height: 30vh;
+      .profile_cont {
+        padding: 0;
+
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 20px;
+        .profile_pic {
+          display: grid;
+          place-items: center;
+          img {
+            width: 60px;
+            height: 60px;
+          }
+        }
+        .profile_name {
+          gap: 5px;
+          flex: 1.2;
+          .report {
+            font-size: 0.65rem;
+          }
+          .name {
+            font-size: 1rem;
+          }
+        }
+      }
+      .nav_bar {
+        ul {
+          flex-direction: row;
+          align-items: center;
+
+          gap: 10px;
+          li {
+            font-size: fontSize(medium);
+          }
+        }
+      }
+    }
+    .daily_info {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+      padding: 20px 0;
+      .cont {
+        width: 260px;
+        min-height: 20vh;
+        .cont-child {
+          .title-cont {
+            font-size: 14px;
+
+            align-items: end;
+          }
+          .hours-detials {
+            flex: 2;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: flex-start;
+            gap: 5px;
+            padding: 0;
+
+            .hours {
+              font-size: 1.8rem;
+              flex: 1;
+              text-align: center;
+            }
+            .previous {
+              flex: 1;
+              text-align: start;
+              padding-top: 13px;
+              font-size: 13px;
+              text-align: start;
+            }
+          }
+        }
+      }
+    }
+  }
+}

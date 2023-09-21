@@ -1,0 +1,348 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  color: white;
+  font-family: Rubik;
+  background-color: hsl(226, 43%, 10%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.root-cont {
+  min-width: 72.6vw;
+  height: 75vh;
+  display: flex;
+  gap: 25px;
+}
+
+.profile {
+  width: 265px;
+  height: 100%;
+  border-radius: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.daily_info {
+  width: calc(100% - 265px);
+  padding: 5px 0 0 0;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 256.6666666667px);
+  grid-template-rows: repeat(2, 35vh);
+  gap: 28px;
+  transition: all 0.3s ease-in-out;
+}
+
+.cont {
+  position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.cont .bg_cont {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: right 5% top 0%;
+}
+.cont:nth-child(1) {
+  background-color: hsl(15, 100%, 70%);
+}
+.cont:nth-child(2) {
+  background-color: hsl(195, 74%, 62%);
+}
+.cont:nth-child(3) {
+  background-color: hsl(348, 100%, 68%);
+}
+.cont:nth-child(4) {
+  background-color: hsl(145, 58%, 55%);
+}
+.cont:nth-child(5) {
+  background-color: hsl(264, 64%, 52%);
+}
+.cont:nth-child(6) {
+  background-color: hsl(43, 84%, 65%);
+}
+.cont .cont-child {
+  background-color: hsl(235, 46%, 20%);
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 82%;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+.cont .cont-child:hover {
+  background-color: hsl(235, 41%, 42%);
+}
+.cont .cont-child .title-cont {
+  width: 100%;
+  flex: 1;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 50px;
+}
+.cont .cont-child .hours-detials {
+  width: 100%;
+  flex: 2.5;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 5px;
+  flex-direction: column;
+}
+.cont .cont-child .hours-detials .hours {
+  font-size: 4.5rem;
+}
+.cont .cont-child .hours-detials .previous {
+  font-size: 18px;
+  color: hsl(236, 100%, 87%);
+}
+
+.profile {
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: hsl(235, 46%, 20%);
+}
+.profile .profile_cont {
+  background-color: hsl(246, 80%, 60%);
+  border-radius: 20px;
+  height: 68%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 33px 0 0 25px;
+  gap: 0px;
+}
+.profile .profile_cont .profile_pic {
+  flex: 1;
+  width: 100%;
+}
+.profile .profile_cont .profile_pic img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+.profile .profile_cont .profile_name {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.profile .profile_cont .profile_name .report {
+  font-size: 1.1rem;
+}
+.profile .profile_cont .profile_name .name {
+  font-size: 2.5rem;
+}
+.profile .nav_bar {
+  height: 32%;
+  color: hsl(236, 100%, 87%);
+}
+.profile .nav_bar ul {
+  height: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.profile .nav_bar ul li {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.current {
+  color: rgb(254, 254, 254);
+}
+
+@media screen and (max-width: 1120px) {
+  .root-cont {
+    min-width: 60.6vw;
+    max-height: 65vh;
+  }
+  .root-cont .profile {
+    min-width: 200px;
+    height: 100%;
+  }
+  .root-cont .profile .profile_cont .profile_name {
+    gap: 5px;
+  }
+  .root-cont .profile .profile_cont .profile_name .report {
+    font-size: 0.9rem;
+  }
+  .root-cont .profile .profile_cont .profile_name .name {
+    font-size: 1.9rem;
+    word-wrap: break-word;
+  }
+  .root-cont .profile .nav_bar ul {
+    padding: 20px 30px;
+    gap: 15px;
+  }
+  .root-cont .profile .nav_bar ul li {
+    font-size: 16px;
+  }
+  .root-cont .daily_info {
+    width: calc(100% - 200px);
+    grid-template-columns: repeat(3, 20vw);
+    grid-template-rows: repeat(2, 30vh);
+  }
+  .root-cont .daily_info .cont .cont-child .title-cont {
+    font-size: 15px;
+  }
+  .root-cont .daily_info .cont .cont-child .hours-detials .hours {
+    font-size: 3.3rem;
+  }
+  .root-cont .daily_info .cont .cont-child .hours-detials .previous {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 970px) {
+  .root-cont {
+    min-width: 54vw;
+    height: 55vh;
+  }
+  .root-cont .profile {
+    max-width: 140px;
+  }
+  .root-cont .profile .profile_cont .profile_name {
+    padding-top: 10px;
+    gap: 5px;
+  }
+  .root-cont .profile .profile_cont .profile_name .report {
+    font-size: 0.7rem;
+  }
+  .root-cont .profile .profile_cont .profile_name .name {
+    font-size: 1.5rem;
+    padding-right: 2px;
+    word-wrap: break-word;
+  }
+  .root-cont .profile .nav_bar ul {
+    padding: 14px 15px;
+    gap: 10px;
+  }
+  .root-cont .profile .nav_bar ul li {
+    font-size: 16px;
+  }
+  .root-cont .daily_info {
+    width: calc(100% - 140px);
+    grid-template-columns: repeat(3, 180px);
+    grid-template-rows: repeat(2, 25.5vh);
+    gap: 15px;
+  }
+  .root-cont .daily_info .cont .cont-child .title-cont {
+    font-size: 14px;
+  }
+  .root-cont .daily_info .cont .cont-child .hours-detials .hours {
+    font-size: 3rem;
+  }
+  .root-cont .daily_info .cont .cont-child .hours-detials .previous {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 800px) {
+  body {
+    align-items: unset;
+  }
+  .root-cont {
+    padding: 20px;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+  }
+  .root-cont .profile {
+    min-width: 250px;
+    min-height: 30vh;
+  }
+  .root-cont .profile .profile_cont {
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+  }
+  .root-cont .profile .profile_cont .profile_pic {
+    display: grid;
+    place-items: center;
+  }
+  .root-cont .profile .profile_cont .profile_pic img {
+    width: 60px;
+    height: 60px;
+  }
+  .root-cont .profile .profile_cont .profile_name {
+    gap: 5px;
+    flex: 1.2;
+  }
+  .root-cont .profile .profile_cont .profile_name .report {
+    font-size: 0.65rem;
+  }
+  .root-cont .profile .profile_cont .profile_name .name {
+    font-size: 1rem;
+  }
+  .root-cont .profile .nav_bar ul {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+  .root-cont .profile .nav_bar ul li {
+    font-size: 16px;
+  }
+  .root-cont .daily_info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 20px 0;
+  }
+  .root-cont .daily_info .cont {
+    width: 260px;
+    min-height: 20vh;
+  }
+  .root-cont .daily_info .cont .cont-child .title-cont {
+    font-size: 14px;
+    align-items: end;
+  }
+  .root-cont .daily_info .cont .cont-child .hours-detials {
+    flex: 2;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 5px;
+    padding: 0;
+  }
+  .root-cont .daily_info .cont .cont-child .hours-detials .hours {
+    font-size: 1.8rem;
+    flex: 1;
+    text-align: center;
+  }
+  .root-cont .daily_info .cont .cont-child .hours-detials .previous {
+    flex: 1;
+    text-align: start;
+    padding-top: 13px;
+    font-size: 13px;
+    text-align: start;
+  }
+}/*# sourceMappingURL=style.css.map */

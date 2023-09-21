@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+//Primary
+
+$Blue: hsl(246, 80%, 60%);
+$Light_red: hsl(15, 100%, 70%);
+$Soft_blue: hsl(195, 74%, 62%);
+$Light_red_study: hsl(348, 100%, 68%);
+$Lime_green_exercise: hsl(145, 58%, 55%);
+$Violet_social: hsl(264, 64%, 52%);
+$Soft_orange_self_care: hsl(43, 84%, 65%);
+
+// Neutral
+$Very_dark_blue: hsl(226, 43%, 10%);
+$Dark_blue: hsl(235, 46%, 20%);
+$Desaturated_blue: hsl(235, 41%, 42%);
+$Pale_Blue: hsl(236, 100%, 87%);
+
+$font_family: Rubik;
+$font-sizes: (
+  "small": 12px,
+  "medium": 16px,
+  "normal": 18px,
+  "large": 24px,
+);
+
+$root-cont-width: (
+  "level_1": 72.6vw,
+  "level_2": 60.6vw,
+  "level_3": 54vw,
+);
+$root-cont-height: (
+  "level_1": 75vh,
+  "level_2": 65vh,
+  "level_3": 55vh,
+);
+$profile_width: (
+  "level_1": 265px,
+  "level_2": 200px,
+  "level_3": 140px,
+);

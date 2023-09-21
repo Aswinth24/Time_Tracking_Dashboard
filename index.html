@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="dist/scss/style.css">
+  <title> Time tracking dashboard</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 14px;
+
+    }
+
+    .attribution a {
+      color: rgb(8, 226, 255);
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="root-cont">
+    <div class="profile">
+      <div class="profile_cont">
+        <div class="profile_pic">
+          <img src="assets/images/image-jeremy.png" alt="">
+        </div>
+        <div class="profile_name">
+          <span class="report">
+            Report for
+          </span>
+
+          <span class="name">
+            Jeremy Robson
+          </span>
+        </div>
+
+      </div>
+      <div class="nav_bar">
+        <ul>
+          <li id="daily"> Daily</li>
+          <li id="weekly">Weekly</li>
+          <li id="monthly"> Monthly</li>
+        </ul>
+      </div>
+    </div>
+    <div class="daily_info" id="daily_info">
+
+    </div>
+  </main>
+
+
+  <div class="attribution">
+    Coded by <a href="https://github.com/Aswinth24">Aswinth</a>.
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>
