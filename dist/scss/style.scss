@@ -39,14 +39,13 @@ body {
 }
 .root-cont {
   min-width: rootWidth("level_1");
-  height: rootHeight("level_1");
-
+  min-height: rootHeight("level_1");
   display: flex;
   gap: 25px;
 }
 .profile {
   width: profileWidth("level_1");
-  height: 100%;
+  min-height: 100%;
   border-radius: 15px;
   transition: all 0.3s ease-in-out;
 }
@@ -201,11 +200,11 @@ body {
 @media screen and (max-width: 1120px) {
   .root-cont {
     min-width: rootWidth(level_2);
-    height: rootHeight(level_2);
+    min-height: rootHeight(level_2);
 
     .profile {
       min-width: profileWidth(level_2);
-      height: 100%;
+      min-height: 100%;
       .profile_cont {
         .profile_name {
           gap: 5px;
@@ -213,7 +212,6 @@ body {
             font-size: 0.9rem;
           }
           .name {
-            
             word-wrap: break-word;
           }
         }
@@ -256,9 +254,10 @@ body {
 @media screen and (max-width: 970px) {
   .root-cont {
     min-width: rootWidth(level_3);
-    height: rootHeight(level_3);
+    min-height: rootHeight(level_3);
     .profile {
-      max-width: profileWidth(level_3);
+      width: profileWidth(level_3);
+      min-height: 100%;
       .profile_cont {
         .profile_name {
           padding-top: 10px;
@@ -286,7 +285,7 @@ body {
     .daily_info {
       width: calc(100% - profileWidth(level_3));
       grid-template-columns: repeat(3, calc(540px / 3));
-      grid-template-rows: repeat(2, calc(51vh / 2));
+      grid-template-rows: repeat(2, calc(50vh / 2));
       gap: 15px;
       .cont {
         .cont-child {
