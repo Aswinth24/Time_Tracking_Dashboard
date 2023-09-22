@@ -22,7 +22,7 @@ body {
 
 .root-cont {
   min-width: 72.6vw;
-  height: 75vh;
+  height: 61vh;
   display: flex;
   gap: 25px;
 }
@@ -36,12 +36,12 @@ body {
 
 .daily_info {
   width: calc(100% - 265px);
-  padding: 5px 0 0 0;
+  padding: 0 0 0 0;
   height: 100%;
   display: grid;
-  grid-template-columns: repeat(3, 256.6666666667px);
-  grid-template-rows: repeat(2, 35vh);
-  gap: 28px;
+  grid-template-columns: repeat(3, 253.3333333333px);
+  grid-template-rows: repeat(2, 28.5vh);
+  gap: 25px;
   transition: all 0.3s ease-in-out;
 }
 
@@ -101,22 +101,23 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  gap: 50px;
+  gap: 40px;
 }
 .cont .cont-child .hours-detials {
   width: 100%;
   flex: 2.5;
   display: flex;
-  align-items: center;
+  align-items: start;
   gap: 10px;
+  padding-left: 20px;
   padding-top: 5px;
   flex-direction: column;
 }
 .cont .cont-child .hours-detials .hours {
-  font-size: 4.5rem;
+  font-size: 3.5rem;
 }
 .cont .cont-child .hours-detials .previous {
-  font-size: 18px;
+  font-size: 16px;
   color: hsl(236, 100%, 87%);
 }
 
@@ -156,22 +157,26 @@ body {
   font-size: 1.1rem;
 }
 .profile .profile_cont .profile_name .name {
-  font-size: 2.5rem;
+  font-weight: 400;
+  padding-right: 10px;
 }
 .profile .nav_bar {
-  height: 32%;
+  height: 35%;
   color: hsl(236, 100%, 87%);
 }
 .profile .nav_bar ul {
   height: 100%;
-  padding: 30px;
+  padding: 25px 30px;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 15px;
 }
 .profile .nav_bar ul li {
   cursor: pointer;
   font-size: 18px;
+}
+.profile .nav_bar ul li:hover {
+  color: white;
 }
 
 .current {
@@ -181,10 +186,10 @@ body {
 @media screen and (max-width: 1120px) {
   .root-cont {
     min-width: 60.6vw;
-    max-height: 65vh;
+    height: 58vh;
   }
   .root-cont .profile {
-    min-width: 200px;
+    min-width: 180px;
     height: 100%;
   }
   .root-cont .profile .profile_cont .profile_name {
@@ -194,29 +199,28 @@ body {
     font-size: 0.9rem;
   }
   .root-cont .profile .profile_cont .profile_name .name {
-    font-size: 1.9rem;
     word-wrap: break-word;
   }
   .root-cont .profile .nav_bar ul {
-    padding: 20px 30px;
+    padding: 10px 30px;
     gap: 15px;
   }
   .root-cont .profile .nav_bar ul li {
-    font-size: 16px;
+    font-size: 15px;
   }
   .root-cont .daily_info {
-    width: calc(100% - 200px);
+    width: calc(100% - 180px);
     grid-template-columns: repeat(3, 20vw);
-    grid-template-rows: repeat(2, 30vh);
+    grid-template-rows: repeat(2, 27.5vh);
   }
   .root-cont .daily_info .cont .cont-child .title-cont {
-    font-size: 15px;
+    font-size: 14px;
   }
   .root-cont .daily_info .cont .cont-child .hours-detials .hours {
-    font-size: 3.3rem;
+    font-size: 2.5rem;
   }
   .root-cont .daily_info .cont .cont-child .hours-detials .previous {
-    font-size: 15px;
+    font-size: 14px;
   }
 }
 @media screen and (max-width: 970px) {
@@ -244,7 +248,7 @@ body {
     gap: 10px;
   }
   .root-cont .profile .nav_bar ul li {
-    font-size: 16px;
+    font-size: 15px;
   }
   .root-cont .daily_info {
     width: calc(100% - 140px);
@@ -307,7 +311,7 @@ body {
     gap: 10px;
   }
   .root-cont .profile .nav_bar ul li {
-    font-size: 16px;
+    font-size: 15px;
   }
   .root-cont .daily_info {
     width: 100%;

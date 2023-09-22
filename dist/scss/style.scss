@@ -52,12 +52,12 @@ body {
 }
 .daily_info {
   width: calc(100% - profileWidth("level_1"));
-  padding: 5px 0 0 0;
+  padding: 0 0 0 0;
   height: 100%;
   display: grid;
-  grid-template-columns: repeat(3, calc(770px / 3));
-  grid-template-rows: repeat(2, calc(70vh / 2));
-  gap: 28px;
+  grid-template-columns: repeat(3, calc(760px / 3));
+  grid-template-rows: repeat(2, calc(57vh / 2));
+  gap: 25px;
   transition: all 0.3s ease-in-out;
 }
 .cont {
@@ -113,21 +113,23 @@ body {
       display: flex;
       align-items: center;
       justify-content: space-around;
-      gap: 50px;
+      gap: 40px;
     }
     .hours-detials {
       width: 100%;
       flex: 2.5;
       display: flex;
-      align-items: center;
+      align-items: start;
       gap: 10px;
+      padding-left: 20px;
       padding-top: 5px;
+
       flex-direction: column;
       .hours {
-        font-size: 4.5rem;
+        font-size: 3.5rem;
       }
       .previous {
-        font-size: 18px;
+        font-size: 16px;
         color: $Pale_Blue;
       }
     }
@@ -167,23 +169,27 @@ body {
         font-size: 1.1rem;
       }
       .name {
-        font-size: 2.5rem;
+        font-weight: 400;
+        padding-right: 10px;
       }
     }
   }
   .nav_bar {
-    height: 32%;
+    height: 35%;
     color: $Pale_Blue;
     ul {
       height: 100%;
-      padding: 30px;
+      padding: 25px 30px;
       display: flex;
       flex-direction: column;
-      gap: 18px;
+      gap: 15px;
 
       li {
         cursor: pointer;
         font-size: fontSize(normal);
+        &:hover {
+          color: white;
+        }
       }
     }
   }
@@ -195,7 +201,7 @@ body {
 @media screen and (max-width: 1120px) {
   .root-cont {
     min-width: rootWidth(level_2);
-    max-height: rootHeight(level_2);
+    height: rootHeight(level_2);
 
     .profile {
       min-width: profileWidth(level_2);
@@ -207,14 +213,14 @@ body {
             font-size: 0.9rem;
           }
           .name {
-            font-size: 1.9rem;
+            
             word-wrap: break-word;
           }
         }
       }
       .nav_bar {
         ul {
-          padding: 20px 30px;
+          padding: 10px 30px;
           gap: 15px;
           li {
             font-size: fontSize(medium);
@@ -226,19 +232,19 @@ body {
       width: calc(100% - profileWidth(level_2));
 
       grid-template-columns: repeat(3, calc(60vw / 3));
-      grid-template-rows: repeat(2, calc(60vh / 2));
+      grid-template-rows: repeat(2, calc(55vh / 2));
 
       .cont {
         .cont-child {
           .title-cont {
-            font-size: 15px;
+            font-size: 14px;
           }
           .hours-detials {
             .hours {
-              font-size: 3.3rem;
+              font-size: 2.5rem;
             }
             .previous {
-              font-size: 15px;
+              font-size: 14px;
             }
           }
         }
